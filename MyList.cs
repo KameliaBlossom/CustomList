@@ -68,7 +68,6 @@ namespace CustomList
             {
                 Add(element);
             }
-            
         }
 
 
@@ -83,10 +82,11 @@ namespace CustomList
             {
                 _array[i + added] = _array[i];
             }
-            
+
             _array[index] = element;
-            
+
             Count++;
+            
         }
 
 
@@ -94,6 +94,7 @@ namespace CustomList
 
         {
             int added = elements.Length;
+
 
             CheckSize(added);
 
