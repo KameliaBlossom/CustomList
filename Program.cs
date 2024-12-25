@@ -1,7 +1,7 @@
-﻿using CustomList;
+﻿using MyCustomList;
 
 MyList newList = new MyList(4);
-int[] example = new int[]{9, 8, 9};
+int[] example = new int[]{9, 9, 9};
 
 newList.Add(1);
 newList.Add(2);
@@ -16,8 +16,5 @@ Console.WriteLine(newList.Capacity);
 
 Console.WriteLine();
 
-for (int i = 0; i < newList.Count; i++)
-{
-    Console.WriteLine(newList[i]);
-}
+for (int i = 0; i < newList.Count; i++){}
 
