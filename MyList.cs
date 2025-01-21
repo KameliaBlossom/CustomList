@@ -1,10 +1,10 @@
 namespace CustomList
 
 {
-    public class MyList
+    public class MyList<T>
 
     {
-        private int[] _array;
+        private T[] _array;
 
 
         public int Capacity { get; set; }
@@ -16,7 +16,7 @@ namespace CustomList
         public MyList()
 
         {
-            _array = new int[2];
+            _array = new T[2];
 
             Capacity = _array.Length;
 
@@ -27,7 +27,7 @@ namespace CustomList
         public MyList(int length)
 
         {
-            _array = new int[length];
+            _array = new T[length];
 
             Capacity = length;
 
@@ -35,10 +35,10 @@ namespace CustomList
         }
 
 
-        public MyList(int length, int element)
+        public MyList(int length, T element)
 
         {
-            _array = new int[length];
+            _array = new T[length];
 
             _array[0] = element;
 
@@ -48,7 +48,7 @@ namespace CustomList
         }
 
 
-        public void Add(int elemnt)
+        public void Add(T elemnt)
 
         {
             int added = 1;
@@ -61,17 +61,17 @@ namespace CustomList
         }
 
 
-        public void Add(int[] elements)
+        public void Add(T[] elements)
 
         {
-            foreach (int element in elements)
+            foreach (T element in elements)
             {
                 Add(element);
             }
         }
 
 
-        public void Add(int index, int element)
+        public void Add(int index, T element)
 
         {
             int added = 1;
@@ -90,7 +90,7 @@ namespace CustomList
         }
 
 
-        public void Add(int index, int[] elements)
+        public void Add(int index, T[] elements)
 
         {
             int added = elements.Length;
@@ -111,7 +111,7 @@ namespace CustomList
         }
 
 
-        public int this[int index]
+        public T this[int index]
         {
             get
 
@@ -175,7 +175,7 @@ namespace CustomList
                 {
                     newLength *= 2;
 
-                    var newArray = new int[newLength];
+                    var newArray = new T[newLength];
 
                     Array.Copy(_array, newArray, Count);
 
@@ -186,7 +186,7 @@ namespace CustomList
             }
         }
 
-        private void Copy(int[] sourceArray, int[] destinationArray)
+        private void Copy(T[] sourceArray, T[] destinationArray)
 
         {
             if (sourceArray.Length > destinationArray.Length)

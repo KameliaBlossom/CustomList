@@ -1,6 +1,6 @@
 ﻿using CustomList;
 
-MyList newList = new MyList(4);
+MyList<int> newList = new MyList<int>(4);
 int[] example = new int[]{9, 8, 9};
 
 newList.Add(1);
